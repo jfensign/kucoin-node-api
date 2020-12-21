@@ -1,0 +1,13 @@
+
+- action: parallel
+  stages:
+    - name: A
+      steps:
+        - action: cmd
+          script: ls -l
+          sendTo: 'stdout'
+    - name: B
+      steps:
+      - action: cmd
+        script: env
+        sendTo: 'stdout'
