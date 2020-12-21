@@ -8,6 +8,10 @@
           sendTo: 'stdout'
     - name: B
       steps:
-      - action: cmd
-        script: env
-        sendTo: 'stdout'
+        - action: cmd
+          script: env
+          sendTo: 'stdout'
+
+- action: archiveArtifact
+  opts:
+    artifacts: steps/test.yml
