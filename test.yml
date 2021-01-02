@@ -11,7 +11,8 @@
         - action: cmd
           script: env
           sendTo: 'stdout'
-
-- action: archiveArtifact
+- action: echo
+  opts: "Something ${env.BUILD_NUMBER}"
+- action: archiveArtifacts
   opts:
     artifacts: steps/test.yml
